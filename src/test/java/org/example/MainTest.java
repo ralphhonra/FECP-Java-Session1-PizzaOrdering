@@ -2,6 +2,7 @@ package org.example;
 
 import org.junit.jupiter.api.*;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class MainTest {
+    private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
     private ArrayList<String> pizzas;
     private ArrayList<Integer> quantities;
